@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ForumSystem.Web.ViewModels.Posts
+﻿namespace ForumSystem.Web.ViewModels.Posts
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class PostCreateInputModel
     {
@@ -14,6 +14,8 @@ namespace ForumSystem.Web.ViewModels.Posts
         [Range(1,int.MaxValue)]
         [Display(Name ="Category")]
         public int CategoryId { get; set; }
+
+        public IEnumerable<CategoryDropDownViewModel> Categories { get; set; }
 
     }
 }

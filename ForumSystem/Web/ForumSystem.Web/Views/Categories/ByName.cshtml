@@ -10,7 +10,7 @@
 {
     <div class="media-body">
         <h4 class="media-heading">@post.Title</h4>
-        <p>@post.ShortContent</p>
+        <p>@Html.Raw(post.ShortContent)</p>
             <ul class="list-inline list-unstyled text-right">
                 <li class="list-inline-item"><i class="fas fa-user-edit"></i>By @post.UserUserName</li>
                 <li class="list-inline-item"><i class="fas fa-comment-dots"></i>@post.CommentsCount comments</li>
