@@ -35,8 +35,14 @@
 
         public IActionResult ById(int id)
         {
-            //TO DO.....
-            return this.View();
+            var viewModel = this.postsService.GetById<PostViewModel>(id);
+
+            if (viewModel == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.View(viewModel);
         }
 
         [HttpPost]
