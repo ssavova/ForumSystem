@@ -31,5 +31,6 @@
         {
             return this.categoryRepository.All().Where(c => c.Name == name).To<T>().FirstOrDefault();
         }
+
     }
 }

@@ -5,6 +5,7 @@
     using ForumSystem.Services.Mapping;
     using Ganss.XSS;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     public class PostViewModel : IMapFrom<Post>, IMapTo<Post>, IHaveCustomMappings
@@ -23,6 +24,8 @@
         public string UserUserName { get; set; }
 
         public int VotesCount { get; set; }
+
+        public IEnumerable<PostCommentsViewModel> Comments { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
         {

@@ -7,5 +7,7 @@
         IEnumerable<T> GetAll<T>(int? count = null);
 
         T GetCategoryByName<T>(string name);
+
+        
     }
 }

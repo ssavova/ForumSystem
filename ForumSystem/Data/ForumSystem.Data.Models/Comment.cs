@@ -8,6 +8,10 @@
 
         public virtual Post Post { get; set; }
 
+        public int? ParrentId { get; set; }
+
+        public virtual Comment Parent { get; set; }
+
         public string Content { get; set; }
 
         public string UserId { get; set; }
